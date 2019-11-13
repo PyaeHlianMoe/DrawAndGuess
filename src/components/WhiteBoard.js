@@ -9,7 +9,7 @@ import Scoreboard from "./Scoreboard";
 // In development you have to point the react front end explicitly to your express server which will be running on a different port than the React Dev Server
 
 const socket = socketIOClient("http://localhost:4010"); //development;
-const playcount = 6;
+const playcount = 2;
 var isplaying = false;
 var answer;
 // In production, the express server will be the one to serve the react application so we can leave out the connection string argument, which will allow the socket to default to it origin (theoretically your express server)
@@ -108,7 +108,7 @@ export default class WhiteBoard extends Component {
         // this.state.gamecount += 1;
         //this.state.score += 1;
         this.state.userList
-          .filter(function(player) {
+          .filter(function (player) {
             return player.username === data.username;
           })
           .map(player => (player.score += 1));
@@ -201,7 +201,7 @@ export default class WhiteBoard extends Component {
         currentY: e.clientY,
         drawing:
           this.state.playertype === "Drawer" &&
-          this.state.gamecount !== playcount
+            this.state.gamecount !== playcount
             ? true
             : false
       };
@@ -262,7 +262,7 @@ export default class WhiteBoard extends Component {
 
   throttle = (callback, delay) => {
     let previousCall = new Date().getTime();
-    return function() {
+    return function () {
       let time = new Date().getTime();
 
       if (time - previousCall >= delay) {
@@ -397,6 +397,9 @@ export default class WhiteBoard extends Component {
 
   timesUp = () => {
     // TODO when times up
+    this.setState({
+      gamecount: 2
+    })
   };
 
   sendButton = () => {

@@ -62,17 +62,17 @@ export default class Countdown extends Component {
     return (
       <div>
         {(minutes === 0 && seconds === 0 ? (
-            <h1>Times up</h1>
-          ) : (
+          this.props.timesUp()
+        ) : (
             <h1 style={{ color: "#2904f7" }}>
               Time Remaining: {seconds < 10 ? `0${seconds}` : seconds}
             </h1>
           )
-        ) 
-        //: minutes === 0 && seconds === 0 ? (
+        )
+          //: minutes === 0 && seconds === 0 ? (
           //this.props.timesUp()
-        //) : null
-       }
+          //) : null
+        }
         <h2>
           Round is {this.props.currentRound}/{this.props.totalRound}
         </h2>
