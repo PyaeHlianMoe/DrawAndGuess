@@ -1,0 +1,58 @@
+/* Blatantly stolen, and unmodified, from https://teamtreehouse.com/library/react-basics */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Inline");
+
+
+.scoreboard {
+  position: relative;
+  bottom: 700px;
+  width: 700px;
+  margin: 70px auto;
+  border-radius: 15px;
+}
+
+.player {
+  display: flex;
+  font-size: 1.2em;
+  border-bottom: solid 2px #444;
+  border-top: solid 2px #444;
+  border-left: solid 2px #444;
+  border-right: solid 2px #444;
+  letter-spacing: 2px;
+  border-radius: 15px;
+  background: lightcoral;
+}
+
+  .player-name {
+    flex-grow: 1;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    font-family: "Bungee Inline", cursive;
+    font-size: 8;
+  }
+
+  .player-score {
+    width: 180px;
+    padding: 10px 10px 10px 10px;
+    background: lightgreen;
+    border-radius: 15px;
+    border-left: solid 2px #444;
+    font-family: "Bungee Inline", cursive;
+    font-size: 8;
+  }
+
+
+  .ok-button {
+    height: 50px;
+    width: 60px;
+    color: red;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 200px 250px;
+    border-color: black;
+    border-radius: 10px;
+    border: solid 2px black;
+    padding: 5px 5px 5px 5px;
+}
+
+
